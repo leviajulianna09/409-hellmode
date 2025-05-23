@@ -7,11 +7,11 @@ require('google-closure-library');
 goog.require('goog.structs.PriorityQueue'); 
 goog.require('goog.structs.QuadTree');
 // Import game settings.
-const c = require('./config.json');  
+const c = require('/config.json');  
 // Import utilities.
-const util = require('./lib/util');
-const ran = require('./lib/random');
-const hshg = require('./lib/hshg');
+const util = require('/lib/util');
+const ran = require('/lib/random');
+const hshg = require('/lib/hshg');
 // Let's get a cheaper array removal thing
 Array.prototype.remove = index => {
     if(index === this.length - 1){  
@@ -178,7 +178,7 @@ function nullVector(v) {
 }
 // Get class definitions and index them
 var Class = (() => {
-    let def = require('./lib/definitions'),
+    let def = require('/lib/definitions'),
         i = 0;
     for (let k in def) {
         if (!def.hasOwnProperty(k)) continue;
@@ -3717,7 +3717,7 @@ var http = require('http'),
 
 // Websocket behavior
 const sockets = (() => {
-    const protocol = require('./lib/fasttalk');
+    const protocol = require('/lib/fasttalk');
     let clients = [], players = [];
     return {
         broadcast: message => {
